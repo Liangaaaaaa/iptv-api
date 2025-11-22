@@ -346,6 +346,7 @@ def convert_to_m3u(path=None, first_channel_name=None, data=None):
     """
     Convert result txt to m3u format
     """
+    m3u_file_path = os.path.splitext(path)[0] + ".m3u"
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as file:
             m3u_output = f'#EXTM3U x-tvg-url="{get_epg_url()}"\n'
